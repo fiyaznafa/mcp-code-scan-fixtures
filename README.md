@@ -18,6 +18,9 @@ mcp_servers/evals/
 Subfolder paths match the test suite (`/mcp_servers/evals/...`) so no test path changes
 are required when pointing `repository_url` at this repo.
 
+Findings-tab servers (one asset with many findings, and one clean asset) live under
+`mcp_servers/evals/findings-tab/`. See that folder's README before registering.
+
 ## Usage in tests
 
 ```bash
