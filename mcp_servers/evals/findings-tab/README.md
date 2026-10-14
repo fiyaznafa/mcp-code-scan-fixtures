@@ -44,3 +44,11 @@ Turn scan on at registration. In **Settings → Supply Chain Profiles**, the MCP
 The server source includes an instructions string, but the current code-scan findings UI does not show Instructions. A missing Instructions section on this fixture is expected.
 
 Annotations on a capability are informational metadata (for example a commit hash). They are shown only when the scan stored them, and they do not change the finding.
+
+Server instructions on the multi-finding server contain the exact sentence:
+
+```text
+FINDINGS_FIXTURE_INSTRUCTIONS: Lab server for the MCP Findings tab.
+```
+
+Drawer tests look for that sentence. Code-scan servers omit instructions until the scanner persists `InitializeResult.instructions`; a remote registration of the same file is what populates Instructions.
